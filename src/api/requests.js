@@ -1,0 +1,20 @@
+import { request } from "./request.js";
+export const url = 'http://localhost:8000/';
+
+export const reqUrl = url;
+export const login = (payload) => { return request(url + 'login/', { body: JSON.stringify(payload) }) };
+export const register = (payload) => { return request(url + 'register',{ body: JSON.stringify(payload) }) };
+export const update = (payload) => { return request(url + 'update/', { body: JSON.stringify(payload) }) };
+export const getUsers = () => {return request(url + 'getUsers',{method: 'GET'}) };
+export const getUser = (payload) => { return request(url + 'getUser/', { body: JSON.stringify(payload) }) };
+export const addHospital = (payload) => { return request(url + 'addHospital',{ body: JSON.stringify(payload) }) };
+export const updateHospital = (payload) => { return request(url + 'updateHospital',{ body: JSON.stringify(payload) }) };
+export const getHospitals = () => {return request(url + 'getHospitals',{method: 'GET'}) };
+export const deleteHospital = (payload) => { return request(url + 'deleteHospital/', { body: JSON.stringify(payload),method: 'DELETE' }) };
+export const addPosition = (payload) => { return request(url + 'addPosition',{ body: JSON.stringify(payload) }) };
+export const getPositions = () => {return request(url + 'getPositions',{method: 'GET'}) };
+export const updatePosition = (payload) => { return request(url + 'updatePosition/', { body: JSON.stringify(payload) }) };
+export const deletePosition = (payload) => { return request(url + 'deletePosition/', { body: JSON.stringify(payload),method: 'DELETE' }) };
+export const getAccepted = () => {return request(url + 'getAccepted',{method: 'GET'}) };
+export const addAccepted = (payload) => { return request(url + 'addAccepted',{ body: JSON.stringify(payload) }) };
+export const updateAccepted = (payload) => { return request(url + 'updateAccepted/', { body: JSON.stringify(payload) }) };
